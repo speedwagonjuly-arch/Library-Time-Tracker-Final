@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>STI Library Time Tracking System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="header-wrap">
+    <img src="sti-logo.png" class="logo">
+    <h2>Library Time Tracking System</h2>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="nav">
+<button id="btnStudent" onclick="UI.showStudent()">Student Portal</button>
+<button id="btnAdmin" onclick="UI.showAdminLogin()">Admin Login</button>
+<button id="btnCalc" onclick="UI.showCalculator()" class="hidden">Hours Calculator</button>
+</div>
+
+<!-- Student Portal -->
+<div id="studentSection" class="section">
+<h3>Student Time In / Time Out</h3>
+
+<input id="fName" placeholder="First Name">
+<input id="lName" placeholder="Last Name"><br>
+
+<button onclick="UI.pulse(this); App.timeIn()" class="blueBtn">Time In</button>
+<button onclick="UI.pulse(this); App.timeOut()" class="blueBtn">Time Out</button>
+
+<p id="studentMsg"></p>
+</div>
+
+<!-- Admin Login -->
+<div id="adminLogin" class="section hidden">
+<h3>Admin Login</h3>
+
+<input id="adminUser" placeholder="Username">
+<input id="adminPass" type="password" placeholder="Password"><br>
+
+<button onclick="Admin.login()" class="yellowBtn">Login</button>
+
+<p id="adminLoginMsg"></p>
+</div>
+
+<!-- Admin Panel -->
+<div id="adminPanel" class="section hidden">
+<h3>Admin Panel <span class="badge">Active</span></h3>
+
+<button onclick="Admin.logout()">Logout</button>
+<button onclick="Admin.exportCSV()" class="yellowBtn">Export Logs</button>
+<button onclick="Admin.clearLogs()" class="yellowBtn">Clear Logs</button>
+
+<div id="logsContainer"></div>
+</div>
+
+<!-- Calculator -->
+<div id="calculatorSection" class="section hidden">
+<h3>Total Hours Calculator</h3>
+
+<input type="file" id="fileUpload" multiple><br>
+<input id="searchFirst" placeholder="First Name">
+<input id="searchLast" placeholder="Last Name"><br>
+
+<button onclick="Calculator.process()" class="yellowBtn">Calculate</button>
+
+<p id="calcResult"></p>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
