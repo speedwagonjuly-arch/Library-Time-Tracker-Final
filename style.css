@@ -1,0 +1,207 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background:#f5f7fb;
+  color:#0f172a;
+  line-height:1.5;
+}
+
+/* HEADER */
+header{
+  background:#0033A1;
+  padding:18px 0;
+  box-shadow:0 4px 18px rgba(0,0,0,.25);
+}
+
+.header-wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:0 16px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo{
+  height:52px;
+}
+
+header h2{
+  color:#fff;
+  font-size:22px;
+  font-weight:700;
+}
+
+/* MAIN CONTAINER */
+.container{
+  max-width:1100px;
+  margin:25px auto;
+  padding:0 16px;
+}
+
+/* NAV BAR */
+.nav{
+  display:flex;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.nav button{
+  flex:1;
+  padding:14px 10px;
+  border:none;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:600;
+  color:#fff;
+  background:#0033A1;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.nav button:hover{
+  filter:brightness(1.1);
+}
+
+.nav button.active{
+  background:#FFD200;
+  color:#0033A1;
+}
+
+/* SECTIONS (CARD STYLE) */
+.section{
+  background:#fff;
+  border-radius:16px;
+  padding:22px;
+  box-shadow:0 12px 24px rgba(0,0,0,.09);
+  margin-bottom:20px;
+}
+
+.section h3{
+  font-size:18px;
+  font-weight:700;
+  color:#0033A1;
+  margin-bottom:12px;
+}
+
+/* FORM INPUTS */
+input{
+  width:250px;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+  margin:6px 8px 12px 0;
+  font-size:14px;
+}
+
+input:focus{
+  outline:none;
+  border-color:#0033A1;
+  box-shadow:0 0 0 1px #0033A1;
+}
+
+/* BUTTONS */
+button{
+  border:none;
+  border-radius:10px;
+  padding:12px 18px;
+  cursor:pointer;
+  font-size:14px;
+  font-weight:600;
+  transition:.15s ease-in-out;
+}
+
+.blueBtn{
+  background:#0033A1;
+  color:#fff;
+}
+
+.yellowBtn{
+  background:#FFD200;
+  color:#0033A1;
+}
+
+button:hover{
+  transform:translateY(-1px);
+}
+
+.blueBtn.activePulse{
+  background:#FFD200;
+  color:#0033A1;
+}
+
+/* STATUS TEXT */
+#studentMsg,#adminLoginMsg,#calcResult{
+  margin-top:10px;
+  font-weight:600;
+}
+
+/* ADMIN BADGE */
+.badge{
+  padding:4px 10px;
+  border-radius:999px;
+  background:#FFD200;
+  color:#0033A1;
+  font-size:12px;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+}
+
+th{
+  text-align:left;
+  padding:10px;
+  background:#0033A1;
+  color:#fff;
+  border-bottom:5px solid #FFD200;
+}
+
+td{
+  padding:10px;
+  border-bottom:1px solid #e2e8f0;
+}
+
+tbody tr:hover{
+  background:#fff9db;
+}
+
+/* HIDE UTILITY */
+.hidden{
+  display:none;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+  .nav{
+    flex-direction:column;
+  }
+
+  input{
+    width:100%;
+  }
+
+  button{
+    width:100%;
+    margin-bottom:6px;
+  }
+
+  .section{
+    padding:18px;
+  }
+
+  .header-wrap{
+    flex-direction:column;
+    text-align:center;
+  }
+}
